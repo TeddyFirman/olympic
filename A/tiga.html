@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal Nomer Tiga</title>
+</head>
+<body>
+    <p>
+        Selamat datang di <b class="classku" id="namaperusahaan">Olympic Group</b>
+    </p>
+
+    <ul>
+        <li id="txt_1">Nama : Jhon Doe</li>
+        <li id="txt_2">Umur : 25 Tahun</li>
+    </ul>
+
+    <script type="text/javascript">
+
+        var olympicGroup = document.getElementById("namaperusahaan");
+
+        olympicGroup.style.color = "blue";
+
+        var data = [
+            { key: "Nama", value: "Teddy Firman" },
+            { key: "Umur", value: "25 Tahun" }
+        ];
+
+        var dataList = document.querySelector("ul");
+
+        dataList.innerHTML = '';
+
+        data.forEach(function(item) {
+            var listItem = document.createElement("li");
+            listItem.textContent = item.key + " : " + item.value;
+            dataList.appendChild(listItem);
+        });
+
+    </script>
+</body>
+</html>
